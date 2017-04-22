@@ -4,7 +4,8 @@
   "description": "MEAN Stack Study",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stserve": "node startapp.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,18 @@
   "bugs": {
     "url": "https://github.com/orionhit/mean_study/issues"
   },
-  "homepage": "https://github.com/orionhit/mean_study#readme"
+  "homepage": "https://github.com/orionhit/mean_study#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "forever": "^0.15.3",
+    "method-override": "^2.3.8",
+    "morgan": "^1.8.1"
+  },
+  "devDependencies": {
+    "color": "^1.0.3"
+  }
 }
