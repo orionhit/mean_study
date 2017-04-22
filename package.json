@@ -28,6 +28,7 @@
     "express-session": "^1.15.2",
     "forever": "^0.15.3",
     "method-override": "^2.3.8",
+    "mongoose": "^4.9.5",
     "morgan": "^1.8.1"
   },
   "devDependencies": {
