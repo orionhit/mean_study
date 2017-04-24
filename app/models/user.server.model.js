@@ -5,10 +5,28 @@ const UserSchema = new Schema({
   userName: String,
   userId: {
     type: String,
-    trim: true
+    unique: true,
+    trim: true,
+    required: true
   },
-  password: String,
-  email: String,
+  password: {
+    type: String,
+    validate: [
+      function(password) {
+        return password.length >= 8;
+      },
+      'Password Too Short'
+    ]
+  },
+  email: {
+    type: String,
+    match: /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/,
+    index: true
+  },
+  role: {
+    type: String,
+    enum: ['Admin','Owner','User']
+  },
   webSite: {
     type: String,
     get: (url) => {
